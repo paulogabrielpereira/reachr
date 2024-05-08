@@ -1,7 +1,7 @@
 <section id="pages">
     <div id="link-pages">
-        <nav id="menu-pages">
-            <ul id="list-pages">
+        <nav class="menu-pages" #menuPages [@openMenu]="stateMenu">
+            <ul class="list-pages" #listPages [@showList]="stateList">
                 <li class="list-item">
                     <a routerLink="#" class="txt-link">
                         <i class="bi bi-folder-fill"></i>
@@ -29,5 +29,8 @@
             </ul>
         </nav>
     </div>
-    <div id="open-menu"></div>
+    <div id="open-menu" (click)="showMenu()" (click)="changeState()" #openMenu>
+        <span id="open-arr">></span>
+        <span id="close-arr"><</span>
+    </div>
 </section>
