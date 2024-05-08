@@ -1,0 +1,11 @@
+* {
+    background-color: var(--bg-page);
+}
+
+footer {
+    padding: 1.5em 5em;
+}
+
+footer p {
+    color: var(--light-font);
+}

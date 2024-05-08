@@ -1,0 +1,49 @@
+#pages {
+    display: flex;
+    width: 13.6em;
+    background-color: transparent;
+}
+
+#menu-pages {
+    width: 12.8em;
+}
+
+#menu-pages > #list-pages {
+    min-height: 100vh;
+    margin-left: 3.6em;
+    margin-top: 3.57em;
+    background-color: var(--bg-menu);
+    list-style: none;
+    display: block;
+}
+
+#menu-pages .list-item {
+    margin: 1.3em 0.5em;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 3px;
+    transform: translateY(10px);
+
+}
+
+#menu-pages .txt-link {
+    text-decoration: none;
+    color: var(--font-color);
+    transition: color .4s ease;
+    display: flex;
+    gap: 1em;
+}
+
+#menu-pages .txt-link:hover {
+    color: var(--light-font);
+}
+
+#menu-pages .txt-link > i {
+    margin-right: 0.5em;
+}
+
+#open-menu {
+    min-height: 100vh;
+    width: 0.8em;
+    background-image: linear-gradient(to right, var(--bg-menu), var(--font-color));
+}
