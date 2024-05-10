@@ -3,6 +3,7 @@
     width: 13.6em;
     background-color: transparent;
 }
+
 .menu-pages > .list-pages {
     min-height: 100vh;
     margin-left: 3.6em;
@@ -42,6 +43,11 @@
     cursor: pointer;
 }
 
-.show-list {
-    display: block;
+#open-menu span {
+    position: absolute;
+    top: 50%;
+    font-size: 1.3em;
+    font-weight: bolder;
+    background-color: transparent;
+    color: var(--font-color);
 }

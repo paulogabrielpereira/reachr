@@ -44,6 +44,7 @@ export class PagesComponent implements OnInit {
 
   @ViewChild('listPages') listPages! : ElementRef;
   @ViewChild('menuPages') menuPages! : ElementRef;
+  @ViewChild('arrMenu') arrMenu! : ElementRef
 
   showMenu() {
     this.menuPages.nativeElement.classList.toggle('exp-menu');
@@ -60,6 +61,14 @@ export class PagesComponent implements OnInit {
   changeState() {
     this.stateMenu = this.stateMenu === 'close' ? 'open' : 'close';
     this.stateList = this.stateList === 'invisible' ? 'visible' : 'invisible';
+  }
+
+  changeArrow() {
+    if (this.stateMenu === 'close') {
+      this.arrMenu.nativeElement.innerHTML = '>'
+    } else {
+      this.arrMenu.nativeElement.textContent = '<'
+    }
   }
 
 }

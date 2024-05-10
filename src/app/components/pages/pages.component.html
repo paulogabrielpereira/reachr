@@ -1,36 +1,39 @@
 <section id="pages">
-    <div id="link-pages">
-        <nav class="menu-pages" #menuPages [@openMenu]="stateMenu">
-            <ul class="list-pages" #listPages [@showList]="stateList">
-                <li class="list-item">
-                    <a routerLink="/cargo" class="txt-link">
-                        <i class="bi bi-folder-fill"></i>
-                        <span class="txt">Cargo</span> 
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a routerLink="/empresa" class="txt-link">
-                        <i class="bi bi-briefcase-fill"></i>
-                        <span class="txt">Empresa</span>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a routerLink="/gestor" class="txt-link">
-                        <i class="bi bi-graph-up"></i>
-                        <span class="txt">Gestor</span>
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a routerLink="/vaga" class="txt-link">
-                        <i class="bi bi-inboxes-fill"></i>
-                        <span class="txt">Vaga</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div id="open-menu" (click)="showMenu()" (click)="changeState()" #openMenu>
-        <span id="open-arr">></span>
-        <span id="close-arr"><</span>
+    <nav class="menu-pages" #menuPages [@openMenu]="stateMenu">
+        <ul class="list-pages" #listPages [@showList]="stateList">
+            <li class="list-item">
+                <a routerLink="/" class="txt-link">
+                    <i class="bi bi-house-fill"></i>
+                    <span class="txt">Início</span> 
+                </a>
+            </li>
+            <li class="list-item">
+                <a routerLink="/cargo" class="txt-link">
+                    <i class="bi bi-folder-fill"></i>
+                    <span class="txt">Cargo</span> 
+                </a>
+            </li>
+            <li class="list-item">
+                <a routerLink="/empresa" class="txt-link">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <span class="txt">Empresa</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a routerLink="/gestor" class="txt-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span class="txt">Gestor</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a routerLink="/vaga" class="txt-link">
+                    <i class="bi bi-inboxes-fill"></i>
+                    <span class="txt">Vaga</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="open-menu" (click)="showMenu()" (click)="changeState()" (click)="changeArrow()" #openMenu>
+        <span #arrMenu>></span>
     </div>
 </section>
