@@ -1,5 +1,12 @@
-.container {
+body {
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--bg-page);
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

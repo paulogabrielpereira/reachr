@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VagaViewComponent implements OnInit {
 
+  numDoc : Number = 12341;
+  author : string = 'Leandro Tabota';
+
   constructor() { }
 
   ngOnInit(): void {
