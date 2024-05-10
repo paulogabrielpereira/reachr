@@ -1,38 +1,53 @@
-#container {
+.container #logo {
     background: linear-gradient(to bottom, var(--light-gradient), var(--middle-gradient), var(--dark-gradient));
     min-width: 100vw;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    left: 1.6em;
+    top: 3.5em;
 }
 
 #logo #symbol {
-    width: 100%;
-    height: 100%;
-    background: url('reachr-gfx/symbol-logo.png') center center no-repeat;
+    width: 167px;
+    height: 234px;
+    background: transparent;
+    transform: scale(1.5);
     position: absolute;
-    left: 5%;
-    top: -9%;
-    transform: scale(1.3);
+    top: 5.5em;
 }
 
 #logo #name {
-    width: 150%;
-    height: 100%;
-    background: url('reachr-gfx/name-logo.png') center center no-repeat;
-    position: absolute;
-    left: -18vw;
-    top: 20%;
+    background-color: transparent;
     transform: scale(0.5);
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 7em;
 }
 
-#container #msg-welcome {
-    position: absolute;
+#name #msg-welcome {
     color: #5f6871;
     font-size: 3em;
     top: 87%;
-    left: 38%;
+    left: 25%;
     cursor: default;
     padding: 0;
-    background: var(--dark-gradient) linear-gradient(to bottom, #134794, #104289);
+    background-color: transparent;
+}
+
+#logo #symbol .image-logo {
+    background: url('reachr-gfx/symbol-logo.png') center center no-repeat;
+    width: 167px;
+    height: 234px;
+}
+
+#logo #name .image-logo {
+    background: url('reachr-gfx/name-logo.png') center center no-repeat;
+    width: 710px;
+    height: 261px;
 }
