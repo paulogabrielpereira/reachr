@@ -1,3 +1,7 @@
+* {
+    background-color: transparent;
+}
+
 .container #logo {
     background: linear-gradient(to bottom, var(--light-gradient), var(--middle-gradient), var(--dark-gradient));
     min-width: 100vw;
@@ -39,15 +43,16 @@
     padding: 0;
     background-color: transparent;
 }
-
-#logo #symbol .image-logo {
-    background: url('reachr-gfx/symbol-logo.png') center center no-repeat;
+#logo #symbol .item-logo {
+    background: transparent url('reachr-gfx/symbol-logo.png') center center no-repeat;
     width: 167px;
     height: 234px;
 }
 
-#logo #name .image-logo {
+#logo #name .item-logo {
     background: url('reachr-gfx/name-logo.png') center center no-repeat;
     width: 710px;
     height: 261px;
+    display: flex;
+    gap: 1em;
 }

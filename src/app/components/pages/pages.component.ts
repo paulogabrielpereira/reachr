@@ -44,7 +44,8 @@ export class PagesComponent implements OnInit {
 
   @ViewChild('listPages') listPages! : ElementRef;
   @ViewChild('menuPages') menuPages! : ElementRef;
-  @ViewChild('arrMenu') arrMenu! : ElementRef
+  @ViewChild('arrMenu') arrMenu! : ElementRef;
+  @ViewChild('modal') modal! : ElementRef;
 
   showMenu() {
     this.menuPages.nativeElement.classList.toggle('exp-menu');
@@ -65,10 +66,18 @@ export class PagesComponent implements OnInit {
 
   changeArrow() {
     if (this.stateMenu === 'close') {
-      this.arrMenu.nativeElement.innerHTML = '>'
+      this.arrMenu.nativeElement.innerHTML = '>';
     } else {
-      this.arrMenu.nativeElement.textContent = '<'
+      this.arrMenu.nativeElement.textContent = '<';
     }
   }
 
+  closeMenu() {
+    if (this.stateMenu = 'open') {
+      this.stateMenu = 'close';
+    }
+    this.stateList = this.stateList === 'invisible' ? 'visible' : 'invisible';
+    this.arrMenu.nativeElement.innerHTML = '>';
+    console.log(this.modal.nativeElement.style.display);
+  }
 }
