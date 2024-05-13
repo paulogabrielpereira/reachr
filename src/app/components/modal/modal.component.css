@@ -1,0 +1,6 @@
+#modal {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+}

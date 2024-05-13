@@ -1,18 +1,18 @@
-* {
-    background-color: transparent;
+app-pages {
+    position: absolute;
+    left: -2.2em;
 }
 
 .container #logo {
     background: linear-gradient(to bottom, var(--light-gradient), var(--middle-gradient), var(--dark-gradient));
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
     position: relative;
-    left: 1.6em;
-    top: 3.5em;
+    left: 2.2em;
 }
 
 #logo #symbol {
@@ -21,7 +21,7 @@
     background: transparent;
     transform: scale(1.5);
     position: absolute;
-    top: 5.5em;
+    top: 9em;
 }
 
 #logo #name {
@@ -32,6 +32,8 @@
     align-items: center;
     justify-content: center;
     gap: 7em;
+    position: absolute;
+    top: 22em;
 }
 
 #name #msg-welcome {
@@ -55,4 +57,11 @@
     height: 261px;
     display: flex;
     gap: 1em;
+}
+
+#modal {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
 }

@@ -42,25 +42,18 @@ export class PagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @ViewChild('listPages') listPages! : ElementRef;
-  @ViewChild('menuPages') menuPages! : ElementRef;
   @ViewChild('arrMenu') arrMenu! : ElementRef;
-  @ViewChild('modal') modal! : ElementRef;
-
-  showMenu() {
-    this.menuPages.nativeElement.classList.toggle('exp-menu');
-    if (this.menuPages.nativeElement.classList.length == 2) {
-      this.listPages.nativeElement.style.display = 'block';
-    } else {
-      this.listPages.nativeElement.style.display = 'none';
-    }
-  }
-
+  @ViewChild('openMenu') openMenu! : ElementRef;
   stateMenu = 'close';
   stateList = 'invisible';
 
   changeState() {
     this.stateMenu = this.stateMenu === 'close' ? 'open' : 'close';
+    if (this.stateMenu === 'open') {
+      this.openMenu.nativeElement.style.boxShadow = '5px 0 5px #00000055';
+    } else {
+      this.openMenu.nativeElement.style.boxShadow = 'none';
+    }
     this.stateList = this.stateList === 'invisible' ? 'visible' : 'invisible';
   }
 
@@ -75,9 +68,9 @@ export class PagesComponent implements OnInit {
   closeMenu() {
     if (this.stateMenu = 'open') {
       this.stateMenu = 'close';
+      this.openMenu.nativeElement.style.boxShadow = 'none';
     }
     this.stateList = this.stateList === 'invisible' ? 'visible' : 'invisible';
     this.arrMenu.nativeElement.innerHTML = '>';
-    console.log(this.modal.nativeElement.style.display);
   }
 }

@@ -1,5 +1,5 @@
-<body>
-    <header class="head">
+<main class="container">
+    <section id="content">
         <div id="pg-title">
             <h1>EDITAR VAGA</h1>
         </div>
@@ -7,15 +7,12 @@
             <h3><strong>{{ numDoc }}</strong> - Teste TI Reachr</h3>
             <h3>Reachr Teste Novo | Cadastrado por: {{ author }}</h3>
         </div>
-    </header>
-    <main class="container">
         <div class="form-submit">
             <a routerLink="#">Salvar e Voltar</a>
             <a routerLink="#">Salvar e Avançar</a>
         </div>
         <h2>Descrição da vaga</h2>
         <h4>*Os campos em destaque são informações que serão publicadas para visualização do candidato</h4>
-
         <form action="test.php" method="post">
             <div class="yesno">
                 <div class="desc">
@@ -27,17 +24,14 @@
                     <button id="on-form">Sim</button>
                 </div>
             </div>
-
             <div class="form-data">
                 <label for="ititulo">*Qual é o título do cargo da sua vaga?</label>
                 <input type="text" name="titulo" id="ititulo" placeholder="Informe aqui" required>
             </div>
-
             <div class="form-data">
                 <label for="iquant">Quantidade de vagas abertas</label>
                 <input type="number" name="quant" id="iquant">
             </div>
-
             <div class="form-data">
                 <label for="itipo">*Tipo de vaga</label>
                 <select name="tipo" id="itipo" required>
@@ -45,15 +39,12 @@
                     <option value="externa">Externa</option>
                 </select>
             </div>
-
             <div class="form-data">
                 <label for="inumreq">Número da Requisição Sênior <span class="help">?</span></label>
                 <input type="text" name="numreq" id="inumreq">
             </div>
-
             <fieldset>
                 <legend>Selecione os campos abaixo para definir o centro de custo da vaga</legend>
-
                 <div class="form-data">
                     <label for="ifilial">Empresa/Filial</label>
                     <select name="filial" id="ifilial">
@@ -62,7 +53,6 @@
                         <option value="filial2">Filial 2</option>
                     </select>
                 </div>
-
                 <div class="form-data">
                     <label for="idept">Departamento</label>
                     <select name="dept" id="idept">
@@ -71,7 +61,6 @@
                         <option value="logistica">Logística</option>
                     </select>
                 </div>
-
                 <div class="form-data">
                     <label for="isetor">Setor</label>
                     <select name="setor" id="isetor">
@@ -81,40 +70,33 @@
                         <option value="oeste">Oeste</option>
                     </select>
                 </div>
-
                 <div class="form-data">
                     <label for="icentro">Centro de custo</label>
                     <input type="text" name="centro" id="icentro" placeholder="Informe aqui">
                 </div>
-
                 <div class="form-data">
                     <label for="ireq">Número da requisição</label>
                     <input type="text" name="req" id="ireq">
                 </div>
-
                 <div class="form-data">
                     <label for="ireqpai">Número da Requisição Pai</label>
                     <input type="text" name="reqpai" id="ireqpai" placeholder="Não informado">
                 </div>
-
                 <div class="form-data">
                     <label for="iedoc">E-DOC</label>
                     <input type="text" name="edoc" id="iedoc" placeholder="Informe aqui">
                 </div>
             </fieldset>
-
             <div class="form-data">
                 <label for="idesc">*Descrição da vaga</label>
                 <div class="text-editor"><!-- todo: text editor --></div>
                 <textarea name="desc" id="idesc" placeholder="Informe aqui..."></textarea>
             </div>
-
             <div class="form-data">
                 <label for="ireqobg">*Requisitos obrigatórios</label>
                 <div class="text-editor"><!-- todo: text editor --></div>
                 <textarea name="reqobg" id="ireqobg" placeholder="Informe aqui..."></textarea>
             </div>
-
             <div class="form-data">
                 <label for="itags">Tags (Competências)</label>
                 <input type="text" name="tags" id="itags" placeholder="Informe aqui">
@@ -122,27 +104,22 @@
                     Obs.: Considere que as Tags serão avaliadas no ato da inscrição do candidato e irá reprová-lo caso ele não as possuir
                 </p>
             </div>
-
             <div class="form-data">
                 <label for="iarea">Área contratante</label>
                 <input type="text" name="area" id="iarea" placeholder="Informe aqui">
             </div>
-
             <div class="form-data">
                 <label for="iresp">Gestor responsável pela área</label>
                 <input type="text" name="resp" id="iresp" placeholder="Informe aqui">
             </div>
-
             <div class="form-data">
                 <label for="igestor">Cargo do Gestor</label>
                 <input type="text" name="gestor" id="igestor" placeholder="Informe aqui">
             </div>
-
             <div class="form-data">
                 <label for="iemail">E-mail do gestor</label>
                 <input type="email" name="email" id="iemail" placeholder="name@example.com">
             </div>
-
             <div class="yesno">
                 <div class="desc">
                     <h3>Fluxo de aprovação de vaga</h3>
@@ -154,5 +131,8 @@
                 </div>
             </div>
         </form>
-    </main>
-</body>
+    </section>
+</main>
+<footer>
+    <app-footer></app-footer>
+</footer>

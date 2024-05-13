@@ -6,14 +6,8 @@
     <app-header></app-header>
   </header>
   <main id="container">
-    <section id="navigation">
-      <app-pages></app-pages>
-    </section>
-    <section id="body">
-      <router-outlet></router-outlet>
-    </section>
+      <app-pages #menu></app-pages>
+      <app-modal #modal></app-modal>
+      <router-outlet #page></router-outlet>
   </main>
-  <footer id="foot">
-    <app-footer></app-footer>
-  </footer>
 </body>
