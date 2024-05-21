@@ -1,14 +1,213 @@
 .container {
-    min-width: 100vw;
-    min-height: 100vh;
+    position: relative;
     background-color: var(--bg-page);
+    left: 2.9em;
+    top: 3.6em;
+    padding: 0.6em 0.8em 0 2em;
+    width: 100%;
+}
+
+#content {
+    width: 100%;
 }
 
 header {
     background-color: var(--bg-page);
 }
 
-app-pages {
-    position: absolute;
-    height: 100%;
+#titles {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--font-color);
+    padding-bottom: 0.5em;
+}
+
+#titles #pg-title h1 {
+    color: var(--dark-font);
+    font-weight: bolder;
+}
+
+#titles #pg-details h3 {
+    font-size: 0.85em;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--font-color);
+}
+
+#content .form-submit {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 0.5em 0;
+}
+
+#content .form-submit .submit-btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--light-gradient);
+    padding: 0.6em 1em;
+    display: flex;
+    gap: 0.5em;
+    border-radius: 3px;
+}
+
+#content h2 {
+    text-align: center;
+    color: var(--font-color);
+    margin: 0.7em 0;
+    width: 100%;
+}
+
+#content h4 {
+    color: var(--light-gradient);
+    font-weight: normal;
+    font-size: 0.65em;
+    text-align: center;
+    width: 80vw;
+}
+
+form .yesno {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin: 1em 0;
+}
+
+.yesno .desc {
+    line-height: 1em;
+    left: 4.4em;
+}
+
+.yesno .desc h5 {
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.yesno .desc .hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.yesno .desc p {
+    font-size: 0.7em;
+    margin-top: 0.3em;
+}
+
+.yesno .onoff {
+    display: flex;
+    align-items: center;
+}
+
+.yesno .onoff.bottom {
+    position: relative;
+    top: 1em;
+}
+
+.yesno .onoff button {
+    border: none;
+    background-color: white;
+    color: var(--font-color);
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+}
+
+.yesno .onoff .on-form {
+    border-radius: 0 3px 3px 0;
+} 
+
+.yesno .onoff .off-form {
+    border-radius: 3px 0 0 3px
+}
+
+.yesno .onoff .active {
+    color: white;
+    background-color: var(--light-gradient);
+}
+
+form .form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    margin-bottom: 1em;
+    width: 400px;
+}
+
+input,
+select
+{
+    border: none;
+    border-radius: 3px;
+    padding: 0.6em;
+}
+
+input:focus,
+select:focus
+{
+    background-color: #7771;
+    outline: none;
+}
+
+.form-data #change-value {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#change-value .updown {
+    background-color: var(--light-gradient);
+    color: white;
+    font-size: 1.2em;
+    width: 1.1em;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=number] {
+    background-color: transparent;
+    font-weight: bold;
+    width: 42px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+select {
+    cursor: pointer;
+}
+
+.form-data label > .help {
+    color: var(--light-gradient);
+    font-weight: bolder;
+    font-size: 1.2em;
+    position: relative;
+    left: 0.5em;
+    cursor: pointer;
+}
+
+label {
+    color: var(--font-color);
+    font-size: 0.9em;
+}
+
+form > fieldset {
+    border: none;
+    margin-top: 2em;
+}
+
+form > fieldset > legend {
+    font-weight: bold;
+    color: var(--light-font);
+    margin-bottom: 1.2em;
+    font-size: 0.8em;
+}
+
+.form-data .warning {
+    font-size: 0.7em;
+    color: var(--placeholder);
 }

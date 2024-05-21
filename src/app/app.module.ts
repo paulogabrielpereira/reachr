@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
+import { NgxEditorModule } from 'ngx-editor';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PagesComponent } from './components/pages/pages.component';
@@ -12,6 +15,7 @@ import { VagaViewComponent } from './components/entities/vaga-view/vaga-view.com
 import { WelcomeViewComponent } from './components/entities/welcome-view/welcome-view.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { TextEditorComponent } from './components/text-editor/text-editor.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +29,14 @@ import { ModalComponent } from './components/modal/modal.component';
     VagaViewComponent,
     WelcomeViewComponent,
     ModalComponent,
+    TextEditorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxEditorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

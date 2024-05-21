@@ -5,9 +5,10 @@
   <header id="head">
     <app-header></app-header>
   </header>
-  <main id="container">
-      <app-pages #menu></app-pages>
-      <app-modal #modal></app-modal>
+  <main id="container" #container>
+    <app-pages></app-pages>
+    <div class="current-page">
       <router-outlet #page></router-outlet>
+    </div>
   </main>
 </body>

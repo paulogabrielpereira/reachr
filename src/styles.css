@@ -1,11 +1,13 @@
 :root {
     --font-color: #3e4149;
     --bg-menu: #e6e7eb;
-    --light-font: #87919d;
+    --light-font: #717b86;
+    --dark-font: #1d1b21;
     --bg-page: #f3f3f3;
     --light-gradient: #3d86f5;
     --middle-gradient: #266cd6;
     --dark-gradient: #0d3b7f;
+    --placeholder: #777777;
 }
 
 * {
@@ -13,6 +15,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Roboto;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 header {

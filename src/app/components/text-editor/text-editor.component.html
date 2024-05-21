@@ -1,0 +1,125 @@
+<main class="container">
+    <section class="editor NgxEditor_Wrapper">
+        <ngx-editor-menu [editor]="editor"></ngx-editor-menu>
+        <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false"></ngx-editor>
+    </section>
+    <section class="editor">
+        <div class="first box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/fluency-systems-regular/48/bold.png" alt="bold"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/fluency-systems-filled/48/italic.png" alt="italic"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/ios-filled/50/underline.png" alt="underline"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/fluency-systems-filled/48/strikethrough.png" alt="strikethrough"/>
+            </button>
+        </div>
+        <div class="second box">
+            <button type="button" class="edit-btn"><img width="16" height="16" src="https://img.icons8.com/ios-filled/50/quote-left.png" alt="quote-left"/></button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/fluency-systems-filled/48/source-code.png" alt="source-code"/>
+            </button>
+        </div>
+        <div class="third box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-two-tone/24/header-1.png" alt="header-1"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-two-tone/24/header-2.png" alt="header-2"/>
+            </button>
+        </div>
+        <div class="fourth box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/sf-regular/48/numbered-list.png" alt="numbered-list"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-outlined/24/list.png" alt="list"/>
+            </button>
+        </div>
+        <div class="fifth box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-subscript-feature-for-use-in-chemical-formula-notation-text-filled-tal-revivo.png" alt="subscript"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/external-tal-revivo-light-tal-revivo/24/external-superscript-tool-for-denoting-formulas-in-mathematical-expression-text-light-tal-revivo.png" alt="superscript"/>
+            </button>
+        </div>
+        <div class="sixth box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/external-inkubators-detailed-outline-inkubators/25/external-right-indent-text-editor-inkubators-detailed-outline-inkubators.png" alt="indent-right"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/external-inkubators-detailed-outline-inkubators/25/external-left-indent-text-editor-inkubators-detailed-outline-inkubators.png" alt="indent-left"/>
+            </button>
+        </div>
+        <div class="seventh box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/ios-glyphs/30/paragraph.png" alt="paragraph"/>
+            </button>
+        </div>
+        <div class="eighth box">
+            <select class="edit-select">
+                <option>Normal</option>
+            </select>
+        </div>
+        <div class="ninth box">
+            <select class="edit-select">
+                <option>Normal</option>
+            </select>
+        </div>
+        <div class="tenth box">
+            <div id="font-color">
+                <input type="color">
+                <button type="button" class="edit-btn">
+                    <img width="16" height="16" src="https://img.icons8.com/material-outlined/24/text-color.png" alt="text-color"/>
+                </button>
+            </div>
+            <div id="background-color">
+                <input type="color">
+                <button type="button" class="edit-btn">
+                    <img width="16" height="16" src="https://img.icons8.com/ios-glyphs/30/fill-color.png" alt="background-color-color"/>
+                </button>
+            </div>
+        </div>
+        <div class="eleventh box">
+            <select class="edit-select">
+                <option>Padrão</option>
+            </select>
+        </div>
+        <div class="twelfth box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-outlined/24/align-left.png" alt="align-left"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-outlined/24/align-right.png" alt="align-right"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-two-tone/24/align-center.png" alt="align-center"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material/24/align-justify--v1.png" alt="align-justify"/>
+            </button>
+        </div>
+        <div class="thirteenth box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/windows/32/remove-format.png" alt="remove-format"/>
+            </button>
+        </div>
+        <div class="fourteen box">
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/android/24/link.png" alt="link"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/material-outlined/24/image.png" alt="image"/>
+            </button>
+            <button type="button" class="edit-btn">
+                <img width="16" height="16" src="https://img.icons8.com/ios/50/movie--v1.png" alt="video"/>
+            </button>
+        </div>
+    </section>
+    <textarea class="text" placeholder="Informe aqui..."></textarea>
+</main>

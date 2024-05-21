@@ -26,15 +26,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       transition('invisible => visible', animate('400ms')),
       transition('visible => invisible', animate('400ms'))
    ]),
-   trigger('showOptions', [
-    state('show', style({
-      
-    })),
-    state('hide', style({
+  ]
+})
 
-    }))
-   ])
-]})
 export class PagesComponent implements OnInit {
 
   constructor() { }
@@ -44,7 +38,9 @@ export class PagesComponent implements OnInit {
 
   @ViewChild('arrMenu') arrMenu! : ElementRef;
   @ViewChild('openMenu') openMenu! : ElementRef;
+  @ViewChild('modal') modal! : ElementRef;
   stateMenu = 'close';
+  statePages = 'disable';
   stateList = 'invisible';
 
   changeState() {

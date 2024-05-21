@@ -1,27 +1,29 @@
 <main class="container">
     <section id="content">
-        <div id="pg-title">
-            <h1>EDITAR VAGA</h1>
-        </div>
-        <div id="pg-details">
-            <h3><strong>{{ numDoc }}</strong> - Teste TI Reachr</h3>
-            <h3>Reachr Teste Novo | Cadastrado por: {{ author }}</h3>
+        <div id="titles">
+            <div id="pg-title">
+                <h1>EDITAR VAGA</h1>
+            </div>
+            <div id="pg-details">
+                <h3><strong>{{ numDoc }}</strong> - Teste TI Reachr</h3>
+                <h3>Reachr Teste Novo | <br> Cadastrado por: {{ author }}</h3>
+            </div>
         </div>
         <div class="form-submit">
-            <a routerLink="#">Salvar e Voltar</a>
-            <a routerLink="#">Salvar e Avançar</a>
+            <a routerLink="#" class="submit-btn"><i class="bi bi-arrow-left"></i><span>Salvar e Voltar</span></a>
+            <a routerLink="#" class="submit-btn"><span>Salvar e Avançar</span><i class="bi bi-arrow-right"></i></a>
         </div>
         <h2>Descrição da vaga</h2>
         <h4>*Os campos em destaque são informações que serão publicadas para visualização do candidato</h4>
-        <form action="test.php" method="post">
+        <form action="" method="post" #form >
             <div class="yesno">
                 <div class="desc">
-                    <h3>Vaga somente para banco de talentos?</h3>
+                    <h5>Vaga somente para banco de talentos?</h5>
                     <p>Todas as regras serão ignoradas.</p>
                 </div>
-                <div class="onoff">
-                    <button id="off-form">Não</button>
-                    <button id="on-form">Sim</button>
+                <div class="onoff top" #buttonsTop (click)="changeYesNo()">
+                    <button class="off-form active" type="button" #noTop>Não</button>
+                    <button class="on-form" type="button" #yesTop>Sim</button>
                 </div>
             </div>
             <div class="form-data">
@@ -30,7 +32,11 @@
             </div>
             <div class="form-data">
                 <label for="iquant">Quantidade de vagas abertas</label>
-                <input type="number" name="quant" id="iquant">
+                <div id="change-value" #input (mousedown)="unselectable()">
+                    <input type="number" name="quant" id="iquant" min="1" value="1" disabled #value>
+                    <div class="updown" (click)="increaseValue()">+</div>
+                    <div class="updown" (click)="decreaseValue()">-</div>
+                </div>
             </div>
             <div class="form-data">
                 <label for="itipo">*Tipo de vaga</label>
@@ -88,14 +94,12 @@
                 </div>
             </fieldset>
             <div class="form-data">
-                <label for="idesc">*Descrição da vaga</label>
-                <div class="text-editor"><!-- todo: text editor --></div>
-                <textarea name="desc" id="idesc" placeholder="Informe aqui..."></textarea>
+                <label>*Descrição da vaga</label>
+                <app-text-editor></app-text-editor>
             </div>
             <div class="form-data">
-                <label for="ireqobg">*Requisitos obrigatórios</label>
-                <div class="text-editor"><!-- todo: text editor --></div>
-                <textarea name="reqobg" id="ireqobg" placeholder="Informe aqui..."></textarea>
+                <label>*Requisitos obrigatórios</label>
+                <app-text-editor></app-text-editor>
             </div>
             <div class="form-data">
                 <label for="itags">Tags (Competências)</label>
@@ -122,12 +126,14 @@
             </div>
             <div class="yesno">
                 <div class="desc">
-                    <h3>Fluxo de aprovação de vaga</h3>
-                    <h3>Deseja que essa vaga seja aprovada por outros gestores?</h3>
+                    <div class="hgroup">
+                        <h5>Fluxo de aprovação de vaga</h5>
+                        <h5>Deseja que essa vaga seja aprovada por outros gestores?</h5>
+                    </div>
                 </div>
-                <div class="onoff">
-                    <button id="off-form">Não</button>
-                    <button id="on-form">Sim</button>
+                <div class="onoff bottom">
+                    <button class="off-form active" type="button" #noBottom>Não</button>
+                    <button class="on-form" type="button" #yesBottom>Sim</button>
                 </div>
             </div>
         </form>

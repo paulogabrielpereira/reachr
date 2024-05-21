@@ -4,8 +4,13 @@
 
 #pages {
     display: flex;
+    height: 100%;
     width: 13.6em;
     background-color: transparent;
+}
+
+app-modal {
+    display: none;
 }
 
 .menu-pages > .list-pages {
