@@ -15,7 +15,6 @@ import { VagaViewComponent } from './components/entities/vaga-view/vaga-view.com
 import { WelcomeViewComponent } from './components/entities/welcome-view/welcome-view.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
-import { TextEditorComponent } from './components/text-editor/text-editor.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { TextEditorComponent } from './components/text-editor/text-editor.compon
     VagaViewComponent,
     WelcomeViewComponent,
     ModalComponent,
-    TextEditorComponent,
   ],
   imports: [
     BrowserModule,
